@@ -50,9 +50,11 @@ const getWeatherData = async (city_value) => {
   } catch (error) {
     weather_data.querySelector(".icon").innerHTML = "";
     weather_data.querySelector(".temperature").textContent = "";
-    weather_data.querySelector(".description").textContent =
-      "An error happened, please try again later";
 
+    weather_data.querySelector(".description").textContent =
+    "An error happened, please try again later";
+    weather_data.querySelector(".description").id = "text-error";
+    
     weather_data.querySelector(".details").innerHTML = "";
   }
 }

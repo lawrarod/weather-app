@@ -36,6 +36,8 @@ main {
 /* form */
 form {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1em;
   width: 70%;
   padding-top: 1em;
@@ -72,7 +74,6 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  /* padding: 2em; */
 }
 
 .temperature {
@@ -100,6 +101,58 @@ img {
   text-align: center;
 }
 
-@media only screen and (min-width: 360px) and (max-width:500px) {
+/* media queries */
+@media only screen and (min-width: 360px) and (max-width: 500px){
+  main {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: centers;
+  }
 
+  h1{
+    font-size: 25px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    /* outline: palevioletred auto; */
+  }
+
+  input[type=text]{
+    width: 100%;
+  }
+  
+  input[type=submit]{
+    width: 40%;
+    margin: 0;
+  }
+
+  #text-error {
+    padding-top: 1em;
+    font-size: medium;
+    text-align: center;
+  }
+
+  #weather-data{
+    gap:0;
+  }
+
+  .temperature{
+    font-size: 35px;
+  }
+
+  .details{
+    padding-top: 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .details > * {
+    width: 50%;
+  }
 }
